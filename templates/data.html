@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Data{% endblock title %}
+{% block body %}
+
+<div class="min-h-screen bg-gray-100 flex items-center justify-center py-8">
+    <div class="w-full max-w-6xl p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-center text-white bg-gray-800 p-4 rounded">GYM Details</h2>
+
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mt-6">
+            <thead>
+                <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-left">ID</th>
+                    <th class="py-3 px-6 text-left">Name</th>
+                    <th class="py-3 px-6 text-left">Number</th>
+                    <th class="py-3 px-6 text-left">Age</th>
+                    <th class="py-3 px-6 text-left">Gender</th>
+                    <th class="py-3 px-6 text-left">Weight</th>
+                    <th class="py-3 px-6 text-left">Height</th>
+                    <th class="py-3 px-6 text-left">Plan</th>
+                    <th class="py-3 px-6 text-left">Edit</th>
+                    <th class="py-3 px-6 text-left">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data %}
+                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                    <th scope="row" class="py-3 px-6">{{ forloop.counter }}</th>
+                    <td class="py-3 px-6">{{ d.name }}</td>
+                    <td class="py-3 px-6">{{ d.m_number }}</td>
+                    <td class="py-3 px-6">{{ d.age }}</td>
+                    <td class="py-3 px-6">{{ d.gender }}</td>
+                    <td class="py-3 px-6">{{ d.weight }}</td>
+                    <td class="py-3 px-6">{{ d.height }}</td>
+                    <td class="py-3 px-6">{{ d.plan }}</td>
+                    <td class="py-3 px-6">
+                        <a href="/update/{{ d.id }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+                    </td>
+                    <td class="py-3 px-6">
+                        <a href="/delete/{{ d.id }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock body %}

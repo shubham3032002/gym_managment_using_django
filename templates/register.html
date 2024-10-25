@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+<div class="container mx-auto mt-5 px-4 flex items-center justify-center min-h-screen">
+    <div class="w-full md:w-1/3 p-4 bg-white shadow-lg rounded-lg">
+        <h2 class="text-white bg-gray-800 text-center p-3 rounded">Enter your details</h2>
+
+        <form action="/register" method="POST" class="mt-4">
+            {% csrf_token %}
+            <div class="space-y-6">
+                <input type="text" placeholder="Enter your name" name="name" class="form-input block w-full rounded border-gray-300 mt-2 mb-4 p-2" required>
+
+                <input type="text" placeholder="Enter the mobile number" name="m_number" class="form-input block w-full rounded border-gray-300 mb-4 p-2" required pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit phone number">
+
+
+                
+                <input type="number" placeholder="Enter your age" name="age" class="form-input block w-full rounded border-gray-300 mb-4 p-2" required>
+                
+                <input type="number" placeholder="Enter your height" name="height" class="form-input block w-full rounded border-gray-300 mb-4 p-2" required>
+                
+                <input type="number" placeholder="Enter your weight" name="weight" class="form-input block w-full rounded border-gray-300 mb-4 p-2" required>
+                
+                <select id="inputState" class="form-select block w-full rounded border-gray-300 mb-4 p-2" name="plan" required>
+                    <option selected>Select Your Plan</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Premium">Premium</option>
+                </select>
+
+                <select id="inputState" class="form-select block w-full rounded border-gray-300 mb-4 p-2" name="gender" required>
+                    <option selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit" class="btn bg-indigo-500 text-white hover:bg-indigo-600 w-full py-3 rounded">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        
+       
+
+
+{% endblock body %}

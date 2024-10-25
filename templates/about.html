@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title  %} About US{% endblock title %}
+
+{% block body %}
+
+<section class="bg-blue-600 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">About Us</h1>
+        <p class="mt-4 text-lg">Learn more about our journey and what drives us.</p>
+    </div>
+</section>
+
+<!-- Company Info Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="md:flex md:space-x-10">
+            <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/600x400" alt="Our Office" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0">
+                <h2 class="text-3xl font-bold text-gray-800">Our Story</h2>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    Founded in 2021, we started with a simple idea: to create a place where people could find inspiration and knowledge. Over the years, we have grown into a community-driven company that strives to bring the best experiences to our customers. From humble beginnings to a thriving company, we owe it all to our passionate team and loyal customers.
+                </p>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    We believe in creating high-quality products and providing excellent service. Our mission is to innovate and deliver solutions that improve lives and connect people.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Meet Our Team</h2>
+        <p class="mt-4 text-gray-600">The amazing people behind our success.</p>
+
+        <div class="flex flex-wrap justify-center mt-10">
+            <!-- Team Member 1 -->
+            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="Team Member 1">
+                    <h3 class="mt-4 text-xl font-bold">John Doe</h3>
+                    <p class="text-gray-600">CEO</p>
+                    <p class="mt-2 text-gray-500 text-sm">John is the visionary behind the company. With over 10 years of experience, he leads the company with passion and dedication.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="Team Member 2">
+                    <h3 class="mt-4 text-xl font-bold">Jane Smith</h3>
+                    <p class="text-gray-600">CTO</p>
+                    <p class="mt-2 text-gray-500 text-sm">Jane is the tech genius behind our products. She oversees the development and ensures everything runs smoothly.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto" src="https://via.placeholder.com/150" alt="Team Member 3">
+                    <h3 class="mt-4 text-xl font-bold">Sam Lee</h3>
+                    <p class="text-gray-600">COO</p>
+                    <p class="mt-2 text-gray-500 text-sm">Sam ensures that everything runs efficiently, from operations to customer support, keeping our customers happy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock body %}
